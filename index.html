@@ -6,103 +6,91 @@
 <title>T-Volt Power & Energy</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
-scroll-behavior:smooth;
-}
-
-body{
-background:#0a0f1c;
-color:white;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
+body{background:#0a0f1c;color:white;overflow-x:hidden}
 
 /* HEADER */
 header{
-position:fixed;
-width:100%;
-top:0;
+position:fixed;width:100%;top:0;
 background:rgba(0,0,0,0.7);
 padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:1000;
-backdrop-filter:blur(8px);
+display:flex;justify-content:space-between;
+align-items:center;z-index:1000;
+backdrop-filter:blur(10px);
 }
 
-header img{
-height:70px;
-}
+header img{height:75px;}
+nav a{color:white;margin-left:25px;text-decoration:none;font-weight:bold}
+nav a:hover{color:#fca311}
 
-nav a{
-color:white;
-margin-left:25px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#fca311;
-}
-
-/* HERO SECTION */
+/* HERO SLIDER */
 .hero{
 height:100vh;
-background:url('background.jpg') no-repeat center center/cover;
-display:flex;
-justify-content:center;
-align-items:center;
 position:relative;
+display:flex;justify-content:center;align-items:center;
+overflow:hidden;
 }
 
-.hero::after{
-content:'';
+.slide{
 position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
+width:100%;height:100%;
+background-size:cover;
+background-position:center;
+animation:fade 12s infinite;
+}
+
+.slide:nth-child(1){
+background:url('background1.jpg');
+animation-delay:0s;
+}
+
+.slide:nth-child(2){
+background:url('background2.jpg');
+animation-delay:6s;
+}
+
+@keyframes fade{
+0%{opacity:0}
+10%{opacity:1}
+45%{opacity:1}
+55%{opacity:0}
+100%{opacity:0}
+}
+
+.overlay{
+position:absolute;width:100%;height:100%;
 background:rgba(0,0,0,0.75);
 }
 
 .hero-content{
-position:relative;
-z-index:1;
-animation:fadeIn 2s ease-in-out;
+position:relative;z-index:2;text-align:center;
 }
 
 .hero-content img{
-width:350px;
+width:380px;
 animation:float 4s ease-in-out infinite;
-}
-
-/* ANIMATION */
-@keyframes fadeIn{
-from{opacity:0;transform:translateY(20px);}
-to{opacity:1;transform:translateY(0);}
+filter:drop-shadow(0 0 25px #00f7ff);
 }
 
 @keyframes float{
-0%{transform:translateY(0px);}
-50%{transform:translateY(-15px);}
-100%{transform:translateY(0px);}
+0%{transform:translateY(0)}
+50%{transform:translateY(-20px)}
+100%{transform:translateY(0)}
 }
 
-/* SECTION */
-section{
-padding:100px 10%;
-}
-
-.section-title{
+/* COUNTER SECTION */
+.counter{
+display:flex;justify-content:space-around;
+padding:80px 10%;background:#111827;
 text-align:center;
-margin-bottom:50px;
-font-size:32px;
-color:#fca311;
 }
+
+.counter h2{font-size:40px;color:#fca311}
+.counter p{color:#ccc}
+
+/* SERVICES */
+section{padding:100px 10%}
+.section-title{text-align:center;margin-bottom:50px;color:#fca311}
 
 .services{
 display:grid;
@@ -111,38 +99,34 @@ gap:30px;
 }
 
 .card{
-background:#111827;
-padding:30px;
-border-radius:12px;
-box-shadow:0 5px 20px rgba(0,0,0,0.4);
-text-align:center;
+background:#1f2937;padding:30px;
+border-radius:12px;text-align:center;
 transition:0.4s;
 }
-
 .card:hover{
 transform:translateY(-12px);
-background:#1f2937;
+box-shadow:0 0 20px #00f7ff;
+}
+
+/* BROCHURE BUTTON */
+.download{
+text-align:center;margin-top:40px;
+}
+.download a{
+background:#fca311;padding:15px 35px;
+color:black;font-weight:bold;
+text-decoration:none;border-radius:6px;
 }
 
 /* FOOTER */
-footer{
-background:#000814;
-text-align:center;
-padding:20px;
-color:#aaa;
-}
+footer{background:#000814;text-align:center;padding:20px;color:#aaa}
 
 /* WHATSAPP */
 .whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 18px;
-border-radius:50%;
-text-decoration:none;
-font-size:22px;
+position:fixed;bottom:20px;right:20px;
+background:#25D366;color:white;
+padding:15px 18px;border-radius:50%;
+font-size:22px;text-decoration:none;
 box-shadow:0 0 20px #25D366;
 }
 </style>
@@ -160,8 +144,26 @@ box-shadow:0 0 20px #25D366;
 </header>
 
 <div class="hero">
+<div class="slide"></div>
+<div class="slide"></div>
+<div class="overlay"></div>
 <div class="hero-content">
 <img src="logo.png">
+</div>
+</div>
+
+<div class="counter">
+<div>
+<h2>150+</h2>
+<p>Projects Completed</p>
+</div>
+<div>
+<h2>120+</h2>
+<p>Happy Clients</p>
+</div>
+<div>
+<h2>5+</h2>
+<p>Years Experience</p>
 </div>
 </div>
 
@@ -172,6 +174,10 @@ box-shadow:0 0 20px #25D366;
 <div class="card"><h3>Industrial Wiring</h3></div>
 <div class="card"><h3>Generator Setup</h3></div>
 <div class="card"><h3>Maintenance</h3></div>
+</div>
+
+<div class="download">
+<a href="#">Download Company Profile</a>
 </div>
 </section>
 
