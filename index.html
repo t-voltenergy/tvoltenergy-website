@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T-Volt Power & Energy</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+header{
+    background:#0a192f;
+    color:white;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h1{
+    color:#fca311;
+}
+
+nav a{
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.hero{
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1509395176047-4a66953fd231');
+    background-size:cover;
+    background-position:center;
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero h2{
+    font-size:48px;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:18px;
+}
+
+.btn{
+    background:#fca311;
+    padding:12px 30px;
+    color:black;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+section{
+    padding:80px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:32px;
+    color:#0a192f;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.contact{
+    text-align:center;
+    font-size:18px;
+}
+
+footer{
+    background:#0a192f;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* WhatsApp Button */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 18px;
+    border-radius:50%;
+    text-decoration:none;
+    font-size:22px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>T-Volt Power & Energy</h1>
+<nav>
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<div class="hero">
+<div>
+<h2>Reliable Solar & Electrical Solutions</h2>
+<p>Professional Solar Installation | Industrial Wiring | Maintenance</p>
+<a href="#contact" class="btn">Get A Free Consultation</a>
+</div>
+</div>
+
+<section id="about">
+<h2 class="section-title">About Us</h2>
+<p style="max-width:800px;margin:auto;text-align:center;">
+T-Volt Power & Energy is a professional solar and electrical service provider based in Jashore, Bangladesh.
+We specialize in solar panel installation, inverter setup, industrial and residential wiring,
+generator installation and maintenance services.
+Our mission is to provide safe, reliable and cost-effective energy solutions.
+</p>
+</section>
+
+<section id="services">
+<h2 class="section-title">Our Services</h2>
+<div class="services">
+
+<div class="card">
+<h3>Solar Panel Installation</h3>
+<p>Complete rooftop and commercial solar system setup.</p>
+</div>
+
+<div class="card">
+<h3>Solar Inverter Setup</h3>
+<p>High-quality inverter installation and configuration.</p>
+</div>
+
+<div class="card">
+<h3>Industrial Electrical Wiring</h3>
+<p>Professional industrial and residential wiring solutions.</p>
+</div>
+
+<div class="card">
+<h3>Generator Installation</h3>
+<p>Supply and setup of generators for backup power.</p>
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<h2 class="section-title">Contact Us</h2>
+<div class="contact">
+📞 Phone: 01642824385 <br><br>
+📧 Email: tanem.jashore@gmail.com <br><br>
+📍 Address: Jashore, Bangladesh
+</div>
+</section>
+
+<footer>
+<p>© 2026 T-Volt Power & Energy | All Rights Reserved</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/8801642824385" target="_blank">💬</a>
+
+</body>
+</html>
